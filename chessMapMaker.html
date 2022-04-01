@@ -1,0 +1,42 @@
+<script>
+let boardSize = 2;
+let chessStringA = "";
+let chessStringB = "";
+let combinedString = "";
+//build chessStringA
+for (let count = 0; count < boardSize; count++) {
+    if (count % 2 === 0) {
+        chessStringA += "a"
+    }
+    else {
+        chessStringA += "b"
+    }
+}
+
+//build chessStringB
+for (let count = 0; count < boardSize; count++) {
+    if (count % 2 === 0) {
+        chessStringB += "b";
+    }
+    else {
+        chessStringB += "a";
+    }
+}
+//build rows
+for (let count = 0; count < boardSize; count++) {
+    if (count % 2 === 0) {
+        combinedString += chessStringA;
+    }
+    if (count % 2 === 1) {
+        combinedString += chessStringB;
+    }
+    if (count < boardSize - 1) {
+        combinedString += '\n'
+    }    
+}
+
+
+console.log(combinedString)
+</script>
+
+<body></body>

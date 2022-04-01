@@ -1,0 +1,30 @@
+<script>
+let count = 0;
+let threeDivisionRemainder = 0;
+let fiveDivisionRemainder = 0;
+while (count < 100) {
+    count++;
+    threeDivisionRemainder = count % 3
+    fiveDivisionRemainder = count % 5
+    if (threeDivisionRemainder === 0) {
+        if (fiveDivisionRemainder === 0) {
+            console.log("fizzbuzz by 3 and 5")
+        }
+        else {
+            console.log("fizz by 3")
+        }
+    }
+    else {
+        if (fiveDivisionRemainder === 0) {
+            console.log("buzz by 5")
+        }
+        else {
+            console.log(count)
+        }
+
+    }
+    
+    }
+
+</script>
+<body></body>

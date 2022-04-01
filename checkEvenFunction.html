@@ -1,0 +1,13 @@
+<script>
+function isEven(positiveWholeNumber) {
+    if (positiveWholeNumber === 0) {
+        return true;
+    } else if (positiveWholeNumber === 1) {
+        return false;
+    } else {
+        return isEven(positiveWholeNumber - 2);
+    }
+}
+console.log(isEven(4))
+</script>
+<body></body>

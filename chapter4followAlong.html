@@ -1,0 +1,70 @@
+<script>
+function addToLog (squirrelCheck, whatHappened) {
+    squirrelLog.push({
+        squirrelCheck: squirrelCheck,
+        whatHappened: whatHappened,
+    });
+}
+function calcPhi(table) {
+   //phi coefficient equation, calc correlation between two boolean
+    return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) * (table[0] + table[1]) * (table[1] + table[3])(table[0] + table[2]));
+}
+
+let squirrelLog = [];
+let boolTable = [0, 0, 0, 0]
+
+//data to populate squirrelLog
+addToLog (true, "driving")
+addToLog (true, "dueling")
+addToLog (false, "basketball")
+addToLog (true, "driving")
+addToLog (false, "driving")
+
+//convert squirrelLog to boolTable
+
+
+for (let i = 0; i < squirrelLog.length; i++ ) {
+    if (squirrelLog[i].squirrelCheck === true) {
+        if (squirrelLog[i].whatHappened === "driving") {
+            boolTable[0]++;
+        }
+        else {
+            boolTable[1]++;
+        }
+    }
+    else {
+        if (squirrelLog[i].whatHappened === "driving") {
+            boolTable[2]++;
+        }
+        else {
+            boolTable[3]++;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+    /*for (let i = 0; i < squirrelLog.length; i++) {
+    let log = squirrelLog[i];
+    squirrelLog[3].whatHappened;
+    if (log["squirrelCheck"] && squirrelLog["whatHappened"] === "driving") {
+        boolTable[0]++;
+    if (log["squirrelCheck"] && squirrelLog["whatHappened"] === "driving") {
+    boolTable[1]++;
+    }
+}
+*/
+
+console.log(squirrelLog)
+console.log(boolTable)
+
+</script>
+<body>
+
+</body>
